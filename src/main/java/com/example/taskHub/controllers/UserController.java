@@ -15,10 +15,6 @@ public class UserController {
   private UserService userService;
   @PostMapping(path="/register",consumes = "application/json") // Map ONLY POST Requests
   public @ResponseBody String addNewUser (@RequestBody (required=false)User user) {
-//    User n = new User();
-//    n.setName(name);
-//    n.setEmail(email);
-//    n.setPassword(password);s
 return userService.registerUser(user);
   }
   @GetMapping(path="/getUsers")
